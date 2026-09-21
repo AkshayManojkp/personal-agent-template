@@ -104,11 +104,11 @@ function resetForm() {
         >
           <SettingsSection
             title="Profile"
-            description="How V identifies you across web, Slack, and iMessage."
+            description="How TeraMystai identifies you across web, Slack, and iMessage."
           >
             <SettingsRow
               label="Name"
-              description="Shown in the sidebar and used when V addresses you."
+              description="Shown in the sidebar and used when TeraMystai addresses you."
             >
               <UInput
                 v-model="form.name"
@@ -128,7 +128,7 @@ function resetForm() {
 
             <SettingsRow
               label="Phone"
-              description="Your E.164 number, so V recognises you when you text it."
+              description="Your E.164 number, so TeraMystai recognises you when you text it."
             >
               <ProfilePhoneInput
                 v-model="form.phoneNumber"
