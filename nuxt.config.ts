@@ -82,6 +82,17 @@ export default defineNuxtConfig({
     db: {
       dialect: "postgresql",
       driver: "postgres-js",
+      // The preview server does not expose project env vars during Nuxt config
+      // evaluation. Keep migrations explicit for deploy builds, while allowing
+      // the app shell and API routes to boot in the preview without a database
+      // URL at prepare time.
+      applyMigrationsDuringBuild:
+        process.env.NODE_ENV === "production" &&
+        Boolean(
+          process.env.DATABASE_URL ||
+            process.env.POSTGRES_URL ||
+            process.env.POSTGRESQL_URL,
+        ),
     },
   },
   runtimeConfig: {
