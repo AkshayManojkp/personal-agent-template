@@ -18,6 +18,10 @@ cp .env.example .env
 
 On Vercel, set them on **both** the `web` and `eve` services — and add a database (see below).
 
+## Internal audit access
+
+`INTERNAL_AUDIT_EMAILS` is a comma-separated allowlist of existing Better Auth account emails permitted to access `/internal-audit`. It adds a restricted audit surface; it does not bypass normal sign-in or create a separate password.
+
 ## Database
 
 ### `DATABASE_URL` (required everywhere)

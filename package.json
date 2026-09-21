@@ -63,6 +63,7 @@
     "@nuxt/eslint": "^1.17.0",
     "@types/node": "26.4.0",
     "eslint": "^10.9.1",
+    "just-bash": "^3.4.2",
     "microsandbox": "^0.6.15",
     "typescript": "^6.0.3",
     "vue-tsc": "^3.3.11"

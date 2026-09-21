@@ -15,3 +15,5 @@ allowBuilds:
   unrs-resolver: true
   vue-demi: true
   sharp: false
+  '@mongodb-js/zstd': set this to true or false
+  node-liblzma: set this to true or false
