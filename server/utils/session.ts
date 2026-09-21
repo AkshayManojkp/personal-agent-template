@@ -1,9 +1,10 @@
-import type { H3Event } from "h3";
 import { fromNodeHeaders } from "better-auth/node";
 import { auth } from "~~/auth";
 import { getNodeRequest } from "~~/server/utils/h3-node";
 
-export async function requireSessionUserId(event: H3Event): Promise<string> {
+export async function requireSessionUserId(
+  event: Parameters<typeof getNodeRequest>[0],
+): Promise<string> {
   const session = await auth.api.getSession({
     headers: fromNodeHeaders(getNodeRequest(event).headers),
   });

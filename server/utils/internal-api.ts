@@ -1,6 +1,6 @@
-import type { H3Event } from "h3";
+type RequestEvent = Parameters<typeof getRequestHeader>[0];
 
-export function requireInternalRequest(event: H3Event) {
+export function requireInternalRequest(event: RequestEvent) {
   const secret = process.env.INTERNAL_API_SECRET?.trim();
 
   if (!secret) {
