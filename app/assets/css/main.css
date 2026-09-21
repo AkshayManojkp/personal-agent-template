@@ -70,6 +70,23 @@
     );
 }
 
+.hero-grid {
+  background-image:
+    linear-gradient(oklch(20% 0 0 / 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(20% 0 0 / 0.08) 1px, transparent 1px);
+  background-size: 2rem 2rem;
+  mask-image:
+    linear-gradient(to bottom, oklch(0% 0 0 / 1), oklch(0% 0 0 / 0.5), transparent);
+}
+
+.status-dot {
+  @apply inline-block size-2 rounded-full bg-emerald-500;
+}
+
+.dark .status-dot {
+  @apply bg-emerald-400;
+}
+
 html.dark .shiki span {
   color: var(--shiki-dark) !important;
   background-color: var(--shiki-dark-bg) !important;
