@@ -6,6 +6,6 @@ export default defineEventHandler(async (event) => {
   const userId = await requireSessionUserId(event);
   const body = await readValidatedBody(event, createThreadBodySchema.parse);
   const thread = await createThreadForUser(userId, body);
-  setResponseStatus(event, 201);
+  event.node.res.statusCode = 201;
   return { thread };
 });
