@@ -15,6 +15,8 @@ export default defineNuxtConfig({
     "/": { ssr: true, headers: privateNoStore },
     "/chat/**": { ssr: true, headers: privateNoStore },
     "/settings/**": { ssr: true, headers: privateNoStore },
+    "/internal-audit": { ssr: true, headers: privateNoStore },
+    "/api/internal/audit": { headers: noStore },
     "/api/auth/**": { headers: noStore },
     "/api/internal/**": { headers: noStore },
     "/api/profile": { headers: privateNoStore },
