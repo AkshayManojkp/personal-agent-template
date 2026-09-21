@@ -75,7 +75,7 @@ const quickChats = [
       <div class="hero-glow relative flex flex-1 overflow-auto">
         <div class="hero-grid pointer-events-none absolute inset-0" aria-hidden="true" />
         <UContainer class="relative flex w-full flex-1 flex-col justify-center gap-8 py-12 sm:gap-10 sm:py-16">
-          <div class="max-w-2xl space-y-4">
+          <div class="hero-intro max-w-2xl space-y-4">
             <UBadge color="neutral" variant="subtle" class="rounded-full px-3 py-1">
               <span class="status-dot me-2" aria-hidden="true" />
               Your personal agent
@@ -93,7 +93,7 @@ const quickChats = [
             </div>
           </div>
 
-          <div class="max-w-3xl space-y-3">
+          <div class="hero-composer max-w-3xl space-y-3">
             <UChatPrompt
               v-model="input"
               class="[view-transition-name:chat-prompt] shadow-xl shadow-black/5"
@@ -119,7 +119,7 @@ const quickChats = [
             </div>
           </div>
 
-          <div class="space-y-3">
+          <div class="hero-prompts space-y-3">
             <div class="flex items-center justify-between">
               <p class="text-sm font-medium text-highlighted">Start with a prompt</p>
               <span class="text-xs text-muted">Personalized for you</span>
